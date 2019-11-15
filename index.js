@@ -1,26 +1,10 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
+  
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
+import 'tachyons';
 
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
+ReactDOM.render(<App />, document.getElementById('root'));
 
-render(<App />, document.getElementById('root'));
